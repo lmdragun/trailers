@@ -23,8 +23,9 @@ class Movie < ActiveRecord::Base
 	end
 
 	def get_actors(input)
+		secret_key = ENV['secret_key']
 
-		bing_image = Bing.new('CwA+ft8ZpoBuK9UosXuogeJK94M4qsRz3IWxKyeShQg', 1, 'Image')
+		bing_image = Bing.new(secret_key, 1, 'Image')
 
 		@actors_with_photos = input.map do |item|
 			bing_result = bing_image.search(item)
