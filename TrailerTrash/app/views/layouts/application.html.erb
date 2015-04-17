@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TrailerTrash</title>
+  <title>TrailerTrash! <%= @title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <header><h1><font color="#<%= @color %>">TRAILER TRASH</font></h1></header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>&copy; Julia, Lindsey, & Biboy</footer>
 
 </body>
 </html>
