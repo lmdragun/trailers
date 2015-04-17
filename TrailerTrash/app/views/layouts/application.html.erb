@@ -7,11 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header><h1><font color="#<%= @color %>">TRAILER TRASH</font></h1></header>
+  <header>
+    <h1><font color="#<%= @color %>">TRAILER TRASH</font></h1>
+    </header>
   <main>
     <%= yield %>
   </main>
   <footer>&copy; Julia, Lindsey, & Biboy</footer>
-
 </body>
 </html>
