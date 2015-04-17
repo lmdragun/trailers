@@ -10,11 +10,11 @@ class Movie < ActiveRecord::Base
 		@year = @response["Year"]
 		@poster_url = @response["Poster"]
 		@plot = @response["Plot"]
-		@actors = @response["Actors"]
+		@actors = @response["Actors"].split(", ")
 		@movie = Movie.new(title: @title, year: @year, poster_url: @poster_url, plot: @plot)
 		if @movie.save
-			array = [@movie, @actors]
-			return array
+			@array = [@movie, @actors]
+			return @array
 		else
 			@movie = Movie.find_by(title: @title)
 			@array = [@movie, @actors]
