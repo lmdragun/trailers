@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
 
 		if params[:query]
 			query = params[:query]
-			@array = Movie.find(query)
+			@array = Movie.identify(query)
 			@movie = @array[0]
 			@actors = @array[1]
 

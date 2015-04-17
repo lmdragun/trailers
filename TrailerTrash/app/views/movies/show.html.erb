@@ -5,7 +5,7 @@
 			<%= @trailer %>
 		</div>
 		<p><%= @movie.plot %></p>
-			<% @actors.each do |a| %>
+			<% @movie.actors.each do |a| %>
 				<div class ="actors">
 					<img src="<%= a.photo_url %>">
 					<div class="name"><%= a.name %></div>
