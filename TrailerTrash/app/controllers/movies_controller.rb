@@ -19,6 +19,7 @@ class MoviesController < ApplicationController
 	def show
 		cl = Colourlovers::Client.new
 		@color = cl.random_color["hex"]
+		
 		@movie = Movie.find(params[:id])
 	end
 
