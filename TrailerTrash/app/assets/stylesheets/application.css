@@ -30,6 +30,18 @@ main {
    padding-bottom:60px;
 }
 
+p {
+  text-indent: 5px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  font-size: 20px;
+  position:absolute;
+  float: left;
+  color: #333;
+}
+
 h1 {
   font-size: 60px;
   margin: auto;
