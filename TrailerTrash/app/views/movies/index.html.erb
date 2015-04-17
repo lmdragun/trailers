@@ -5,6 +5,14 @@
   <%= submit_tag("Search") %>
 <% end %>
 <% if params[:query] %>
-	<h4><%= link_to @title, movie_path(@movie) %></h4>
+	<h4><%= link_to @movie.title, movie_path(@movie) %></h4>
 <% end %>
 </div>
+
+
+<h2>Recent Titles</h2>
+<ul>
+<% Movie.all.each do |movie| %>
+<li><%= link_to movie.title, movie_path(movie) %> - <%= movie.year %></li>
+	<% end %>
+</ul>
