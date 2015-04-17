@@ -21,6 +21,10 @@ class MoviesController < ApplicationController
 		@color = cl.random_color["hex"]
 		
 		@movie = Movie.find(params[:id])
+
+		@thing = YoutubeSearch.search('#{@movie.title} trailer').first
+		@wholeurl = @thing["id"]
+		@id = @wholeurl.slice(41..60)
 	end
 
 end

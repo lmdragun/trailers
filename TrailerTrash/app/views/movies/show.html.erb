@@ -2,7 +2,7 @@
 	<h2><%= @movie.title %></h2>
 	<div class="box">
 		<div class="trailer">
-			<%= @trailer %>
+		<iframe src="http://www.youtube.com/embed/<%= @id %>" width=640 height=480 frameborder=0></iframe>
 		</div>
 		<p><%= @movie.plot %></p>
 			<% @movie.actors.each do |a| %>
