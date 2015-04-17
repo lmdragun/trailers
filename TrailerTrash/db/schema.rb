@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150417144259) do
     t.string   "photo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "movie_id"
   end
 
   create_table "movies", force: :cascade do |t|

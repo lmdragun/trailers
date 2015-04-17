@@ -4,6 +4,8 @@ class CreateActors < ActiveRecord::Migration
       t.string :name
       t.string :photo_url
       t.timestamps
+      t.references :movie
+      t.integer :movie_id
     end
   end
 end
