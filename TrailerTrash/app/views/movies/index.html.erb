@@ -4,4 +4,9 @@
   <%= text_field_tag(:query) %>
   <%= submit_tag("Search") %>
 <% end %>
+
 </div>
+
+<% if params[:query] %>
+	<%= link_to @title, movie_path(@movie) %>
+<% end %>
