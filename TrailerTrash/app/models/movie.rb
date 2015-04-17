@@ -2,7 +2,7 @@ class Movie < ActiveRecord::Base
 	has_many :actors
 	validates :title, uniqueness: true
 
-		def self.find(query)
+		def self.identify(query)
 		array = query.split
 		plus_query = array.join("+")
 		@response = HTTParty.get("http://www.omdbapi.com/?t=#{plus_query}&y=&plot=short&r=json").parsed_response
@@ -10,7 +10,7 @@ class Movie < ActiveRecord::Base
 		@year = @response["Year"]
 		@poster_url = @response["Poster"]
 		@plot = @response["Plot"]
-		@actors = @response["Actors"].split(", ")
+		@actors = @response["Actors"]
 		@movie = Movie.new(title: @title, year: @year, poster_url: @poster_url, plot: @plot)
 		if @movie.save
 			array = [@movie, @actors]
