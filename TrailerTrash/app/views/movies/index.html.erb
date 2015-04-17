@@ -6,4 +6,15 @@
 
 <% if params[:query] %>
 	<%= link_to @title, movie_path(@movie) %>
+		<% @movie.actors.all.each do |item| %>
+			<%= item.name %> is <%= image_tag item.photo_url %>
+		<% end %>
+		
 <% end %>
+
+<h2>Recent Titles</h2>
+<ul>
+<% Movie.all.each do |movie| %>
+<li><%= link_to movie.title, movie_path(movie) %> - <%= movie.year %></li>
+	<% end %>
+</ul>
