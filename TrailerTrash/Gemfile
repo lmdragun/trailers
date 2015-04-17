@@ -4,6 +4,7 @@ gem 'httparty'
 gem 'figaro'
 gem 'searchbing'
 gem 'colourlovers'
+gem 'youtube_search'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
