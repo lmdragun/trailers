@@ -1,12 +1,11 @@
 <div class="show">
-		<h2><%= @movie.title %></h2>
-
-		<div class="box">
-			<div class="trailer">
-				<%= @trailer %>
-			</div>
-			<p><%= @movie.plot %></p>
-				<% @actors.each do |a| %>
+	<h2><%= @movie.title %></h2>
+	<div class="box">
+		<div class="trailer">
+			<%= @trailer %>
+		</div>
+		<p><%= @movie.plot %></p>
+			<% @actors.each do |a| %>
 				<div class ="actors">
 					<img src="<%= a.photo_url %>">
 					<div class="name"><%= a.name %></div>
